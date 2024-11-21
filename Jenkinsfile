@@ -31,7 +31,6 @@ pipeline {
         stage('Deploy') {
             steps { 
                 sh 'echo this is deploy' 
-                error 'pipeline failed' 
             }
         }
         stage('Print Params') {
