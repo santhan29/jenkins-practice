@@ -26,11 +26,12 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo this is testing'
+                sh 'env'
             }
         }
         stage('Deploy') { 
             when {
-                branch 'main' 
+                expression { env.GIT_BRANCH == "origin/main" } 
             }
             steps { 
                 sh 'echo this is deployment' 
