@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Deploy') { 
             when {
-                branch 'production' 
+                branch 'main' 
             }
             steps { 
                 sh 'echo this is deployment' 
