@@ -28,7 +28,10 @@ pipeline {
                 sh 'echo this is testing'
             }
         }
-        stage('Deploy') {
+        stage('Deploy') { 
+            when {
+                branch 'production' 
+            }
             steps { 
                 sh 'echo this is deployment' 
             }
